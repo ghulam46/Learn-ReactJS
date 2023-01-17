@@ -1,4 +1,22 @@
 import "./App.css";
+import { useState } from "react";
+
+function App() {
+  // basic useState is const [state, setState] = useState(initialState);
+  const [age, setAge] = useState(0);
+  // const age = 0;
+
+  const increaseAge = () => {
+    setAge(age + 1);
+  };
+
+  return (
+    <div className="App">
+      {age}
+      <button onClick={increaseAge}>Increase Age</button>
+    </div>
+  );
+}
 
 // function App() {
 //   return (
@@ -20,22 +38,22 @@ import "./App.css";
 //   );
 // };
 
-function App() {
-  const age = 19;
+// function App() {
+//   const age = 19;
 
-  return (
-    <div className="App">
-      {/* Ternary Operator in React */}
-      {age >= 18 ? <h1>OVER AGE</h1> : <h1>UNDER AGE</h1>}
-    </div>
-  );
+//   return (
+//     <div className="App">
+//       {/* Ternary Operator in React */}
+//       {age >= 18 ? <h1>OVER AGE</h1> : <h1>UNDER AGE</h1>}
+//     </div>
+//   );
 
-  // Normal Operator with if else
-  // if (age >= 18) {
-  //   return <h1>OVER AGE</h1>;
-  // } else {
-  //   return <h1>UNDER AGE</h1>;
-  // };
-}
+//   // Normal Operator with if else
+//   // if (age >= 18) {
+//   //   return <h1>OVER AGE</h1>;
+//   // } else {
+//   //   return <h1>UNDER AGE</h1>;
+//   // };
+// }
 
 export default App;
