@@ -2,21 +2,52 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const [textColor, setTextColor] = useState("black");
+  const [count, setCount] = useState(0);
+
+  const increase = () => {
+    setCount(count + 1);
+  };
+
+  const decrease = () => {
+    count <= 0 ? setCount(0) : setCount(count - 1);
+    // if (count <= 0) {
+    //   setCount(0);
+    // } else {
+    //   setCount(count - 1);
+    // }
+  };
+
+  const setToZero = () => {
+    setCount(0);
+  };
 
   return (
     <div className="App">
-      <button
-        onClick={() => {
-          setTextColor(textColor === "black" ? "red" : "black");
-        }}
-      >
-        Show/Hide
-      </button>
-      <h1 style={{ color: textColor }}>HI MY NAME IS GHULAM</h1>
+      <button onClick={increase}>Increase</button>
+      <button onClick={decrease}>Decrease</button>
+      <button onClick={setToZero}>Set to zero</button>
+      <br />
+      {count}
     </div>
   );
 }
+
+// function App() {
+//   const [textColor, setTextColor] = useState("black");
+
+//   return (
+//     <div className="App">
+//       <button
+//         onClick={() => {
+//           setTextColor(textColor === "black" ? "red" : "black");
+//         }}
+//       >
+//         Show/Hide
+//       </button>
+//       <h1 style={{ color: textColor }}>HI MY NAME IS GHULAM</h1>
+//     </div>
+//   );
+// }
 
 // function App() {
 //   const [showText, setShowText] = useState(true);
