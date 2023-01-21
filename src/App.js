@@ -2,21 +2,38 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const [showText, setShowText] = useState(true);
+  const [textColor, setTextColor] = useState("black");
 
   return (
     <div className="App">
       <button
         onClick={() => {
-          setShowText(!showText);
+          setTextColor(textColor === "black" ? "red" : "black");
         }}
       >
         Show/Hide
       </button>
-      {showText && <h1>HI MY NAME IS GHULAM</h1>}
+      <h1 style={{ color: textColor }}>HI MY NAME IS GHULAM</h1>
     </div>
   );
 }
+
+// function App() {
+//   const [showText, setShowText] = useState(true);
+
+//   return (
+//     <div className="App">
+//       <button
+//         onClick={() => {
+//           setShowText(!showText);
+//         }}
+//       >
+//         Show/Hide
+//       </button>
+//       {showText && <h1>HI MY NAME IS GHULAM</h1>}
+//     </div>
+//   );
+// }
 
 // function App() {
 //   const [inputValue, setInputValue] = useState("");
