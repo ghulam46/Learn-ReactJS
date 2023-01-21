@@ -1,22 +1,38 @@
 import "./App.css";
 import { useState } from "react";
 
-
 function App() {
-  const [inputValue, setInputValue] = useState("");
-
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
+  const [showText, setShowText] = useState(true);
 
   return (
     <div className="App">
-      <input type="text" onChange={handleInputChange} />
-      <br />
-      <h1>{inputValue}</h1>
+      <button
+        onClick={() => {
+          setShowText(!showText);
+        }}
+      >
+        Show/Hide
+      </button>
+      {showText && <h1>HI MY NAME IS GHULAM</h1>}
     </div>
   );
 }
+
+// function App() {
+//   const [inputValue, setInputValue] = useState("");
+
+//   const handleInputChange = (event) => {
+//     setInputValue(event.target.value);
+//   };
+
+//   return (
+//     <div className="App">
+//       <input type="text" onChange={handleInputChange} />
+//       <br />
+//       <h1>{inputValue}</h1>
+//     </div>
+//   );
+// }
 
 // function App() {
 //   // basic useState is const [state, setState] = useState(initialState);
