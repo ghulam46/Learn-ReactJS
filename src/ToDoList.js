@@ -11,7 +11,7 @@ function ToDoList() {
 
   const addTask = () => {
     // const newTodoList = [...todoList, newTask];
-    setTodoList([...todoList, newTask]);
+    setTodoList([...todoList, newTask]); 
   };
 
   return (
@@ -22,10 +22,11 @@ function ToDoList() {
       </div>
       <div className="list">
         {todoList.map((task) => {
-          return (
-            <>
+          return ( 
+            <div className="listContent">
               <h1>{task}</h1>
-            </>
+              <button className="btnDelete">X</button>
+            </div>
           );
         })}
       </div>

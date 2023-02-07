@@ -28,6 +28,18 @@
   color: #61dafb;
 }
 
+.listContent {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btnDelete {
+  height: 20px;
+  margin-top: 32px;
+  margin-left: 10px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
