@@ -11,8 +11,26 @@ function ToDoList() {
 
   const addTask = () => {
     // const newTodoList = [...todoList, newTask];
-    setTodoList([...todoList, newTask]); 
+    setTodoList([...todoList, newTask]);
   };
+
+  const deleteTask = (taskName) => {
+    const newTodoList = todoList.filter((task)=> {
+      // logic with if else
+      if(task === taskName) {
+        return false;
+      }else {
+        return true;
+      }
+      
+      // another logic with 1 line return
+      // return task !== taskName;
+    });
+    setTodoList(newTodoList);
+
+    // logic with 1 line
+    // setTodoList(todoList.filter((task)=> task !== taskName));
+  }
 
   return (
     <div className="App">
@@ -25,7 +43,7 @@ function ToDoList() {
           return ( 
             <div className="listContent">
               <h1>{task}</h1>
-              <button className="btnDelete">X</button>
+              <button onClick={() => deleteTask(task)} className="btnDelete">X</button>
             </div>
           );
         })}
