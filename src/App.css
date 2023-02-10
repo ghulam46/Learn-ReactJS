@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -36,8 +41,23 @@
 
 .btnDelete {
   height: 20px;
-  margin-top: 32px;
+  margin-top: 15px;
   margin-left: 10px;
+}
+
+.addTask {
+  height: 30vh;
+  background-color: dodgerblue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.inputBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes App-logo-spin {
