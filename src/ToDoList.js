@@ -14,6 +14,7 @@ function ToDoList() {
     const task = {
       id: todoList.length === 0 ? 1 : todoList[todoList.length - 1].id + 1,
       taskName: newTask,
+      completed: false,
     };
     // const newTodoList = [...todoList, newTask];
     setTodoList([...todoList, task]);
@@ -35,7 +36,19 @@ function ToDoList() {
 
     // logic with 1 line
     // setTodoList(todoList.filter((task)=> task !== taskName));
-  }
+  };
+
+  const completeTask = (id) => {
+    setTodoList(
+      todoList.map((task) => {
+        if(task.id === id) {
+          return {...task, completed: true};
+        }else {
+          return task;
+        }
+      })
+    );
+  };
 
   return (
     <div className="App">
@@ -46,8 +59,17 @@ function ToDoList() {
         </div>
       </div>
       <div className="list">
+        {/* function map for loop object in this case loop todolist */}
         {todoList.map((task) => {
-          return <Task taskName={task.taskName} id={task.id} deleteTask={deleteTask} />;
+          return (
+            <Task 
+              taskName={task.taskName} 
+              id={task.id} 
+              completed={task.completed}
+              deleteTask={deleteTask}
+              completeTask={completeTask} 
+            />
+          );
         })}
       </div>
     </div>
