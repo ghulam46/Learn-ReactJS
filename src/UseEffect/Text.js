@@ -6,8 +6,10 @@ export const Text = () => {
 
     useEffect(() => {
         console.log("COMPONENT MOUNTED");
+        document.title = 'ini bukan useEffect';
 
         return(() => {
+            document.title = 'ini useEffect';
             console.log("COMPONENT UNMOUNTED")
         });
     }, []);
