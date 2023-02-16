@@ -4,6 +4,7 @@ import App from "./App";
 import ToDoList from "./ToDoList";
 import StateHookCount from "./StateHookCount";
 import UseEffect from "./UseEffect/UseEffect";
+import FetchApi from "./FetchApi";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -11,6 +12,13 @@ root.render(
     {/* <App /> */}
     {/* <ToDoList /> */}
     {/* <StateHookCount /> */}
-    <UseEffect />
+    {/* <UseEffect /> */}
+    {/* <FetchApi /> */}
   </React.StrictMode>
 );
+
+const exampleFetchApi = ReactDOM.createRoot(document.getElementById("exampleFetchApi"));
+exampleFetchApi.render(
+  <FetchApi />
+);
+
