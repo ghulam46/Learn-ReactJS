@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./App.css";
+import "./FetchStyle.css";
 import axios from "axios";
 
 function FetchApi() {
@@ -25,9 +25,9 @@ function FetchApi() {
     }, []);
 
     return (
-        <div className="App">
+        <div className="FetchCSS">
             <button onClick={fetchCatFact}>Generate Cat Fact</button>
-            <p> {catFact} </p>
+            <p className="contentFetch"> {catFact} </p>
         </div>
     );
 }

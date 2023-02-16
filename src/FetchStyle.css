@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.FetchCSS {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.FetchCSS button {
+    padding: 10px;
+    background-color: lightblue;
+    cursor: pointer;
+    border: 2px solid lightblue;
+}
+
+.FetchCSS button:hover {
+    background-color: white;
+}
+
+.contentFetch {
+    margin-top: 7vh;
+    background-color: lightblue;
+    margin: 15px;
+    padding: 30px;
+}
