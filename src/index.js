@@ -5,6 +5,7 @@ import ToDoList from "./ToDoList";
 import StateHookCount from "./StateHookCount";
 import UseEffect from "./UseEffect/UseEffect";
 import FetchApi from "./FetchApi";
+import PredictedAgeWithApi from "./PredictedAgeWithApi";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,6 +20,7 @@ root.render(
 
 const exampleFetchApi = ReactDOM.createRoot(document.getElementById("exampleFetchApi"));
 exampleFetchApi.render(
-  <FetchApi />
+  // <FetchApi />
+  <PredictedAgeWithApi />
 );
 
