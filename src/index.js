@@ -7,6 +7,7 @@ import UseEffect from "./UseEffect/UseEffect";
 import FetchApi from "./FetchApi";
 import PredictedAgeWithApi from "./PredictedAgeWithApi";
 import ExcuserApi from "./ExcuserApi";
+import ReactRouter from "./ReactRouterDom/ReactRouter";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -23,6 +24,7 @@ const exampleFetchApi = ReactDOM.createRoot(document.getElementById("exampleFetc
 exampleFetchApi.render(
   // <FetchApi />
   // <PredictedAgeWithApi />
-  <ExcuserApi />
+  // <ExcuserApi />
+  <ReactRouter />
 );
 
