@@ -3,22 +3,21 @@ import { useState } from "react";
 import { Text } from "./Text";
 
 function UseEffect() {
+  const [showText, setShowText] = useState(false);
 
-    const [showText, setShowText] = useState(false);
+  return (
+    <div className="App">
+      <button
+        onClick={() => {
+          setShowText(!showText);
+        }}
+      >
+        Show Text
+      </button>
 
-    return (
-        <div className="App">
-            <button 
-                onClick={() => {
-                    setShowText(!showText);
-                }}
-            >
-                Show Text
-            </button>
-
-            {showText && <Text />}
-        </div>
-    );
+      {showText && <Text />}
+    </div>
+  );
 }
 
 export default UseEffect;

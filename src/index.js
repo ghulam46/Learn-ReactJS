@@ -20,11 +20,12 @@ root.render(
   </React.StrictMode>
 );
 
-const exampleFetchApi = ReactDOM.createRoot(document.getElementById("exampleFetchApi"));
+const exampleFetchApi = ReactDOM.createRoot(
+  document.getElementById("exampleFetchApi")
+);
 exampleFetchApi.render(
   // <FetchApi />
   // <PredictedAgeWithApi />
   // <ExcuserApi />
   <ReactRouter />
 );
-
