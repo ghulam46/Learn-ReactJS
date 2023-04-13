@@ -8,6 +8,7 @@ import FetchApi from "./FetchApi";
 import PredictedAgeWithApi from "./PredictedAgeWithApi";
 import ExcuserApi from "./ExcuserApi";
 import ReactRouter from "./ReactRouterDom/ReactRouter";
+import ReactQuery from "./ReactQuery/ReactQuery";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,15 +18,17 @@ root.render(
     {/* <StateHookCount /> */}
     {/* <UseEffect /> */}
     {/* <FetchApi /> */}
+    <ReactQuery />
   </React.StrictMode>
 );
 
 const exampleFetchApi = ReactDOM.createRoot(
   document.getElementById("exampleFetchApi")
 );
-exampleFetchApi.render(
+exampleFetchApi
+  .render
   // <FetchApi />
   // <PredictedAgeWithApi />
   // <ExcuserApi />
-  <ReactRouter />
-);
+  // <ReactRouter />
+  ();
