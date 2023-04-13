@@ -12,7 +12,16 @@ import { Navbar } from "./Pages/Navbar";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function ReactRouter() {
-  const client = new QueryClient();
+  // defaultOption and queries refetchWindowFocus false handle api unrefresh automatic
+  // if value false, then unrefresh automatic
+  // if value true, then refresh the api data
+  const client = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnWindowFocus: false,
+      },
+    },
+  });
 
   return (
     <div>
